@@ -8,25 +8,25 @@ public:
 		vector<int> res = {};
 		if (num > 1)
 		{
+			int divisor = 2;
 			if(num == 4)
 			{
-				while (num % 2 == 0)
+				while (num % divisor == 0)
 				{
-					res.push_back(2);
-					num /= 2;
+					res.push_back(divisor);
+					num /= divisor;
 				}
 			}
+			
 			else if(num == 6)
 			{
-				while(num % 2 == 0)
+				for(divisor = 2; num > 1; divisor++)
 				{
-					res.push_back(2);
-					num /= 2;
-				}
-				while(num % 3 == 0)
-				{
-					res.push_back(3);
-					num /= 3;
+					while (num % divisor == 0)
+					{
+						res.push_back(divisor);
+						num /= divisor;
+					}
 				}
 			}
 			else
