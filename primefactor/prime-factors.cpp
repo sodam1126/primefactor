@@ -6,24 +6,17 @@ public:
 	vector<int> of(int num)
 	{
 		vector<int> res = {};
-		if (num > 1)
+
+		for (int divisor = 2; num > 1; divisor++)
 		{
-			int divisor = 2;
-			if(num == 4 || num == 8 || num == 6 || num == 9 || num == 12)
+			while (num % divisor == 0)
 			{
-				for (divisor = 2; num > 1; divisor++)
-				{
-					while (num % divisor == 0)
-					{
-						res.push_back(divisor);
-						num /= divisor;
-					}
-				}
+				res.push_back(divisor);
+				num /= divisor;
 			}
-			else
-				res.push_back(num);
 		}
-			
+
+
 		return res;
-	}
-};
+		}
+	};
