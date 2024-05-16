@@ -10,8 +10,11 @@ public:
 		{
 			if(num == 4)
 			{
-				res.push_back(2);
-				res.push_back(2);
+				while (num % 2 == 0)
+				{
+					res.push_back(2);
+					num /= 2;
+				}
 			}
 			else
 				res.push_back(num);
