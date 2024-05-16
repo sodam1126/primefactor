@@ -9,7 +9,7 @@ public:
 		if (num > 1)
 		{
 			int divisor = 2;
-			if(num == 4)
+			if(num == 4 || num == 8)
 			{
 				while (num % divisor == 0)
 				{
@@ -18,7 +18,7 @@ public:
 				}
 			}
 			
-			else if(num == 6)
+			else if(num == 6 || num == 9)
 			{
 				for(divisor = 2; num > 1; divisor++)
 				{
